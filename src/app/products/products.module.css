@@ -1,0 +1,109 @@
+.main {
+    min-height: 100vh;
+    /* background: #111;  Removed to show global background */
+    padding-top: 100px;
+    /* Space for fixed navbar */
+    padding-bottom: 4rem;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.title {
+    font-size: 4rem;
+    color: var(--monster-green);
+    text-transform: uppercase;
+    font-family: var(--font-heading);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 3rem;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+.card {
+    background: #151515;
+    border: 1px solid #333;
+    padding: 2rem;
+    border-radius: 12px;
+    text-align: center;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    border-color: var(--monster-green);
+    box-shadow: 0 0 20px rgba(0, 255, 42, 0.2);
+}
+
+.imagePlaceholder {
+    height: 350px;
+    background: linear-gradient(180deg, #222 0%, #111 100%);
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #444;
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    border-radius: 8px;
+}
+
+.productImage {
+    width: 100%;
+    height: 350px;
+    object-fit: contain;
+    margin-bottom: 2rem;
+    filter: drop-shadow(0 0 15px rgba(0, 0, 0, 0.5));
+    transition: transform 0.3s;
+}
+
+.card:hover .productImage {
+    transform: scale(1.05) rotate(2deg);
+}
+
+.productName {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+    color: #fff;
+}
+
+.productSize {
+    color: #888;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.productPrice {
+    color: var(--monster-green);
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-family: var(--font-heading);
+    margin-bottom: 1.5rem;
+}
+
+.buyBtn {
+    width: 100%;
+    padding: 1rem;
+    background: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.buyBtn:hover {
+    background: var(--monster-green);
+    border-color: var(--monster-green);
+    color: #000;
+}
